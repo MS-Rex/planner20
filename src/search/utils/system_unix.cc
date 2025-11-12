@@ -1,7 +1,9 @@
 #include "system.h"
-#include <sys/sysinfo.h>
 
 #if OPERATING_SYSTEM == LINUX || OPERATING_SYSTEM == OSX
+#if OPERATING_SYSTEM == LINUX
+#include <sys/sysinfo.h>
+#endif
 /*
   NOTE:
   Methods with the suffix "_reentrant" are meant to be used in event

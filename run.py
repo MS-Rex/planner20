@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import subprocess
 from sys import argv
 from time import time
 
@@ -29,8 +30,8 @@ FACTS_FILE = os.path.join(TEST_FOLDER, f"facts_file")
 TRAIN_FOLDER = os.path.join(TEST_FOLDER, f"test_folder")
 
 SAMPLING_COMMANDLINE = (
-    f'/fast-downward.py --sas-file {os.path.join(TEST_FOLDER, "sampling-output.sas")} --plan-file {SAMPLE_FILE} '
-    f"--build release {DOMAIN_FILE} {PROBLEM_FILE} "
+    f'/app/fast-downward.py --sas-file {os.path.join(TEST_FOLDER, "sampling-output.sas")} --plan-file {SAMPLE_FILE} '
+    f'--build release {DOMAIN_FILE} {PROBLEM_FILE} '
     f'--search "sampling_search_fsm(eager_greedy([ff(transform=sampling_transform())], transform=sampling_transform()), '
     f"techniques=[gbackward_fsm("
     f"technique={default_args.SAMPLING_TECHNIQUE}, "
@@ -53,12 +54,12 @@ SAMPLING_COMMANDLINE = (
     f'random_seed={default_args.DEFAULT_SEED})"'
 )
 TRAIN_COMMANDLINE = (
-    f"/train.py {SAMPLE_FILE} --train-folder {TRAIN_FOLDER} --facts-file {FACTS_FILE}"
+    f"/app/train.py {SAMPLE_FILE} --train-folder {TRAIN_FOLDER} --facts-file {FACTS_FILE}"
 )
 TEST_COMMANDLINE = (
-    f"/test.py {TRAIN_FOLDER} {PROBLEM_FILE} --plan-file {PLAN_FILE} --facts-file {FACTS_FILE}"
+    f"/app/test.py {TRAIN_FOLDER} {PROBLEM_FILE} --plan-file {PLAN_FILE} --facts-file {FACTS_FILE}"
     + (f" --domain-pddl {DOMAIN_FILE}" if DOMAIN_FILE else "")
 )
 
 for commandline in [SAMPLING_COMMANDLINE, TRAIN_COMMANDLINE, TEST_COMMANDLINE]:
-    os.system(commandline)
+    subprocess.run(commandline, shell=True, check=False)

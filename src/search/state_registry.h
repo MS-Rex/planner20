@@ -216,14 +216,19 @@ public:
 
     void print_statistics() const;
 
-    class const_iterator : public std::iterator<
-                               std::forward_iterator_tag, StateID> {
+    class const_iterator {
         /*
           We intentionally omit parts of the forward iterator concept
           (e.g. default construction, copy assignment, post-increment)
           to reduce boilerplate. Supported compilers may complain about
           this, in which case we will add the missing methods.
         */
+        // Iterator traits (replaces deprecated std::iterator)
+        using iterator_category = std::forward_iterator_tag;
+        using value_type = StateID;
+        using difference_type = std::ptrdiff_t;
+        using pointer = const StateID*;
+        using reference = const StateID&;
 
         friend class StateRegistry;
         const StateRegistry &registry;

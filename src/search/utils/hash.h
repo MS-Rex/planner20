@@ -4,6 +4,7 @@
 #include <cassert>
 #include <cstddef>
 #include <cstdint>
+#include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -229,6 +230,20 @@ inline void feed(HashState &hash_state, std::uint64_t value) {
     hash_state.feed(static_cast<std::uint32_t>(value));
     value >>= 32;
     hash_state.feed(static_cast<std::uint32_t>(value));
+}
+
+// Explicit overload for size_t to avoid ambiguity with GCC 15+
+// Only define if size_t is different from uint64_t to avoid redefinition
+// When size_t == uint64_t, the uint64_t overload above handles size_t values directly
+// This template uses SFINAE to only participate in overload resolution when size_t != uint64_t
+template<typename T>
+inline auto feed(HashState &hash_state, T value)
+    -> typename std::enable_if<
+        std::is_same<T, std::size_t>::value &&
+        !std::is_same<std::size_t, std::uint64_t>::value,
+        void
+    >::type {
+    feed(hash_state, static_cast<std::uint64_t>(value));
 }
 
 template<typename T>

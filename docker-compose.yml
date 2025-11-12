@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  planner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fsm-planner:latest
+    volumes:
+      # Mount domain and problem files directory
+      - ./domains:/app/domains:ro
+      # Mount output directory for results
+      - ./FSM.results:/app/FSM.results
+      # Mount custom domain/problem files if needed
+      - ./:/app/workspace:ro
+    working_dir: /app
+    # Override entrypoint to allow interactive use
+    entrypoint: ["/bin/bash"]
+

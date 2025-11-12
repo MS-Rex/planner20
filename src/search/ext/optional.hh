@@ -2253,12 +2253,14 @@ public:
   /// one.
   ///
   /// \group emplace
-  template <class... Args> T &emplace(Args &&... args) noexcept {
-    static_assert(std::is_constructible<T, Args &&...>::value,
-                  "T must be constructible with Args");
+  template <class U> T &emplace(U &&u) noexcept {
+    static_assert(std::is_lvalue_reference<U>::value || 
+                  std::is_same<detail::decay_t<U>, detail::remove_reference_t<T>>::value,
+                  "emplace for optional<T&> requires an lvalue reference");
 
     *this = nullopt;
-    this->construct(std::forward<Args>(args)...);
+    // For optional<T&>, we rebind to the address of the argument
+    m_value = std::addressof(u);
     return value();
   }
 

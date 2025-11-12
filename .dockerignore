@@ -1,0 +1,40 @@
+# Build artifacts
+builds/
+*.o
+*.a
+*.so
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Results
+FSM.results/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Lock files (keep pyproject.toml)
+uv.lock
+
+# Large libtorch zip files (already extracted)
+third_party/libtorch.part*.zip
+third_party/libtorch.full.zip
+
