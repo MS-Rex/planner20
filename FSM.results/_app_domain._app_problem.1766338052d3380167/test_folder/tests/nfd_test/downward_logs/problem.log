@@ -1,0 +1,151 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /app/builds/release/bin/translator.py /app/domain.pddl /app/problem.pddl --unit-cost --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.008s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 21 rules.
+Computing model... [0.000s CPU, 0.001s wall-clock]
+82 relevant atoms
+52 auxiliary atoms
+134 final queue length
+208 total queue pushes
+Completing instantiation... [0.000s CPU, 0.002s wall-clock]
+Instantiating: [0.000s CPU, 0.005s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.010s CPU, 0.004s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+5 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.005s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+44 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+8 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+9 of 9 variables necessary.
+5 of 9 mutex groups necessary.
+32 of 32 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 9
+Translator derived variables: 0
+Translator facts: 30
+Translator goal facts: 3
+Translator mutex groups: 5
+Translator total mutex groups size: 25
+Translator operators: 32
+Translator axioms: 0
+Translator task size: 295
+Translator peak memory: 311732 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.020s CPU, 0.025s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /app/builds/release/bin/downward --search 'eager_greedy([nh(torch_fsm_network(path=FSM.results/_app_domain._app_problem.1766338052d3380167/test_folder/models/traced_0.pt, facts=[file FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file]))], max_time=3275)' --internal-plan-file /app/output/plan04.txt < output.sas
+[t=0.00220537s, peak=764744 KB, curr=764760 KB] reading input...
+[t=0.00889967s, peak=764920 KB, curr=764920 KB] done reading input!
+FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file
+Atom holding(d)
+Atom on(d, a)
+Atom on(d, b)
+Atom on(d, c)
+Atom ontable(d)
+Atom clear(d)
+Atom clear(a)
+Atom clear(b)
+Atom clear(c)
+Atom arm-empty()
+Atom holding(a)
+Atom on(a, b)
+Atom on(a, c)
+Atom on(a, d)
+Atom ontable(a)
+Atom holding(b)
+Atom on(b, a)
+Atom on(b, c)
+Atom on(b, d)
+Atom ontable(b)
+Atom holding(c)
+Atom on(c, a)
+Atom on(c, b)
+Atom on(c, d)
+Atom ontable(c)
+Number of unknown facts:0
+Initializing network heuristic...
+[t=0.212211s, peak=769344 KB, curr=769344 KB] Building successor generator...done!
+[t=0.214157s, peak=769352 KB, curr=769352 KB] peak memory difference for successor generator creation: 8 KB
+[t=0.214181s, peak=769352 KB, curr=769352 KB] time for successor generation creation: 0.00177933s
+[t=0.214589s, peak=769356 KB, curr=769356 KB] Variables: 9
+[t=0.214616s, peak=769356 KB, curr=769356 KB] FactPairs: 30
+[t=0.214632s, peak=769356 KB, curr=769356 KB] Bytes per state: 4
+[t=0.217223s, peak=769364 KB, curr=769364 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.338802s, peak=829472 KB, curr=829472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766338052d3380167/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file))): 6
+[t=0.339036s, peak=829472 KB, curr=829472 KB] g=0, 1 evaluated, 0 expanded
+[t=0.339824s, peak=829480 KB, curr=829480 KB] Initial heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766338052d3380167/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file))): 6
+[t=0.33993s, peak=829480 KB, curr=829480 KB] pruning method: none
+[t=0.391361s, peak=830440 KB, curr=830440 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766338052d3380167/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file))): 5
+[t=0.391524s, peak=830440 KB, curr=830440 KB] g=1, 3 evaluated, 1 expanded
+[t=0.418s, peak=830440 KB, curr=830440 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766338052d3380167/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file))): 3
+[t=0.418835s, peak=830440 KB, curr=830440 KB] g=3, 7 evaluated, 3 expanded
+[t=0.423689s, peak=830440 KB, curr=830440 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766338052d3380167/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file))): 2
+[t=0.424126s, peak=830440 KB, curr=830440 KB] g=4, 9 evaluated, 4 expanded
+[t=0.428332s, peak=830440 KB, curr=830440 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766338052d3380167/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766338052d3380167/facts_file))): 0
+[t=0.428369s, peak=830440 KB, curr=830440 KB] g=6, 16 evaluated, 7 expanded
+[t=0.428389s, peak=830440 KB, curr=830440 KB] Solution found!
+[t=0.433122s, peak=830444 KB, curr=830444 KB] Actual search time: 0.0931802s
+unstack a b (1)
+put-down a (1)
+unstack b c (1)
+stack b a (1)
+pick-up c (1)
+stack c b (1)
+[t=0.433164s, peak=830448 KB, curr=830448 KB] Plan length: 6 step(s).
+[t=0.433164s, peak=830448 KB, curr=830448 KB] Plan cost: 6
+[t=0.433164s, peak=830448 KB, curr=830448 KB] Expanded 8 state(s).
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Reopened 0 state(s).
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Evaluated 16 state(s).
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Evaluations: 16
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Generated 21 state(s).
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Dead ends: 0 state(s).
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Number of registered states: 16
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Int hash set load factor: 16/16 = 1
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Int hash set resizes: 4
+[t=0.433164s, peak=830452 KB, curr=830452 KB] Search time: 0.216099s
+[t=0.433164s, peak=830456 KB, curr=830456 KB] Total time: 0.433164s
+Solution found.
+Peak memory: 830460 KB
+Remove intermediate file output.sas
+search exit code: 0
+

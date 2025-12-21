@@ -1,0 +1,8 @@
+(fly plane1 tokyo singapore)
+(board dave plane1 singapore)
+(fly plane1 singapore tokyo)
+(deplane dave plane1 tokyo)
+(board carol plane1 tokyo)
+(fly plane1 tokyo sydney)
+(deplane carol plane1 sydney)
+; cost = 7 (unit cost)

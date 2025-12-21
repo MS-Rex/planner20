@@ -1,0 +1,5 @@
+(fly plane1 newyork tokyo)
+(board bob plane1 tokyo)
+(fly plane1 tokyo newyork)
+(deplane bob plane1 newyork)
+; cost = 4 (unit cost)

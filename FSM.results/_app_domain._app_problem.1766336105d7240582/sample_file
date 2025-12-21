@@ -1,0 +1,11 @@
+#<Time>=0.102202s/900
+#<PlanCost>=single integer value
+#<State>=Atom at-airplane(plane1, london);Atom at-airplane(plane1, paris);Atom at-person(alice, london);Atom at-person(alice, paris);Atom in-airplane(alice, plane1);
+0;10010
+1;01001
+2;10001
+0;01010
+3;10100
+0;10010
+4;01100
+0;01010

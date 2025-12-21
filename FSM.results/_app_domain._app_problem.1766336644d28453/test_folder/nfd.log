@@ -1,0 +1,341 @@
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO     Configuration
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | hostname: None
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | date: 21 December 2025 17:04:11 UTC
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | commit: None
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | command_line: /app/train.py FSM.results/_app_domain._app_problem.1766336644d28453/sample_file --train-folder FSM.results/_app_domain._app_problem.1766336644d28453/test_folder --facts-file FSM.results/_app_domain._app_problem.1766336644d28453/facts_file
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | samples: FSM.results/_app_domain._app_problem.1766336644d28453/sample_file
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | samples_md5sum: None
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | model: resnet
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | loss_function: mse
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | save_best_epoch_model: True
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | patience: 25
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | output_layer: regression
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | linear_output: False
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | num_folds: 1
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | hidden_layers: 2
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | hidden_units: 250
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | batch_size: 512
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | learning_rate: 0.0001
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | max_epochs: 1048576
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | max_training_time: 1499s
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | activation: relu
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | weight_decay: 0
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | dropout_rate: 0
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | training_size: 0.9
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | shuffle: True
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | shuffle_seed: 777
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | gpu: False
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | bias: True
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | bias_output: True
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | normalize_output: False
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | check_dead_once: True
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | seed_increment_when_born_dead: 100
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | weights_method: kaiming_uniform
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | seed: 777
+2025-12-21 17:04:11 src.pytorch.utils.log_helpers INFO      | output_folder: results
+2025-12-21 17:04:11 __main__     WARNING  ATTENTION: Training will be performed on device 'cpu'.
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Reading and preparing data...
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Number of samples: 25000
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Mem usage after loading data: 3828 MB
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Generating 1-fold...
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Created train dataloader.
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Created validation dataloader.
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Created test dataloader.
+2025-12-21 17:04:11 src.pytorch.k_fold_training_data INFO     Mem usage after creating fold(s): 4332 MB
+2025-12-21 17:04:11 __main__     INFO     Loading the training data took 0.5535s.
+2025-12-21 17:04:11 __main__     INFO     Running training workflow for fold 1 out of 1
+2025-12-21 17:04:11 __main__     INFO     
+HNN(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (hid): ModuleList(
+    (0): Linear(in_features=31, out_features=250, bias=True)
+    (1): Linear(in_features=250, out_features=250, bias=True)
+  )
+  (resblock): ResidualBlock(
+    (resblock): Sequential(
+      (0): Linear(in_features=250, out_features=250, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=250, out_features=250, bias=True)
+    )
+    (relu): ReLU()
+  )
+  (opt): Linear(in_features=250, out_features=1, bias=True)
+  (activation): ReLU()
+  (output_activation): ReLU()
+)
+2025-12-21 17:04:13 src.pytorch.train_workflow INFO     Epoch 0 | avg_train_loss=111.104247 | avg_val_loss=52.941530 *
+2025-12-21 17:04:14 src.pytorch.train_workflow INFO     Epoch 1 | avg_train_loss=48.354968 | avg_val_loss=42.963047 *
+2025-12-21 17:04:15 src.pytorch.train_workflow INFO     Epoch 2 | avg_train_loss=39.180277 | avg_val_loss=34.120744 *
+2025-12-21 17:04:16 src.pytorch.train_workflow INFO     Epoch 3 | avg_train_loss=30.847821 | avg_val_loss=26.800157 *
+2025-12-21 17:04:18 src.pytorch.train_workflow INFO     Epoch 4 | avg_train_loss=25.566859 | avg_val_loss=23.800087 *
+2025-12-21 17:04:19 src.pytorch.train_workflow INFO     Epoch 5 | avg_train_loss=23.786463 | avg_val_loss=23.085003 *
+2025-12-21 17:04:20 src.pytorch.train_workflow INFO     Epoch 6 | avg_train_loss=23.025685 | avg_val_loss=22.448846 *
+2025-12-21 17:04:21 src.pytorch.train_workflow INFO     Epoch 7 | avg_train_loss=22.412464 | avg_val_loss=22.005076 *
+2025-12-21 17:04:23 src.pytorch.train_workflow INFO     Epoch 8 | avg_train_loss=21.916500 | avg_val_loss=21.610717 *
+2025-12-21 17:04:24 src.pytorch.train_workflow INFO     Epoch 9 | avg_train_loss=21.350916 | avg_val_loss=21.088401 *
+2025-12-21 17:04:25 src.pytorch.train_workflow INFO     Epoch 10 | avg_train_loss=20.932852 | avg_val_loss=20.688143 *
+2025-12-21 17:04:26 src.pytorch.train_workflow INFO     Epoch 11 | avg_train_loss=20.395467 | avg_val_loss=20.288345 *
+2025-12-21 17:04:28 src.pytorch.train_workflow INFO     Epoch 12 | avg_train_loss=19.942589 | avg_val_loss=19.928363 *
+2025-12-21 17:04:29 src.pytorch.train_workflow INFO     Epoch 13 | avg_train_loss=19.520897 | avg_val_loss=19.673883 *
+2025-12-21 17:04:31 src.pytorch.train_workflow INFO     Epoch 14 | avg_train_loss=19.104000 | avg_val_loss=19.351109 *
+2025-12-21 17:04:32 src.pytorch.train_workflow INFO     Epoch 15 | avg_train_loss=18.707825 | avg_val_loss=19.041695 *
+2025-12-21 17:04:33 src.pytorch.train_workflow INFO     Epoch 16 | avg_train_loss=18.307641 | avg_val_loss=18.889358 *
+2025-12-21 17:04:34 src.pytorch.train_workflow INFO     Epoch 17 | avg_train_loss=17.958372 | avg_val_loss=18.516041 *
+2025-12-21 17:04:35 src.pytorch.train_workflow INFO     Epoch 18 | avg_train_loss=17.593340 | avg_val_loss=18.284702 *
+2025-12-21 17:04:37 src.pytorch.train_workflow INFO     Epoch 19 | avg_train_loss=17.263953 | avg_val_loss=18.214056 *
+2025-12-21 17:04:38 src.pytorch.train_workflow INFO     Epoch 20 | avg_train_loss=16.965662 | avg_val_loss=17.756589 *
+2025-12-21 17:04:39 src.pytorch.train_workflow INFO     Epoch 21 | avg_train_loss=16.611713 | avg_val_loss=17.579099 *
+2025-12-21 17:04:40 src.pytorch.train_workflow INFO     Epoch 22 | avg_train_loss=16.260980 | avg_val_loss=17.346452 *
+2025-12-21 17:04:41 src.pytorch.train_workflow INFO     Epoch 23 | avg_train_loss=15.960215 | avg_val_loss=17.101467 *
+2025-12-21 17:04:43 src.pytorch.train_workflow INFO     Epoch 24 | avg_train_loss=15.648404 | avg_val_loss=16.826635 *
+2025-12-21 17:04:44 src.pytorch.train_workflow INFO     Epoch 25 | avg_train_loss=15.356120 | avg_val_loss=16.807430 *
+2025-12-21 17:04:45 src.pytorch.train_workflow INFO     Epoch 26 | avg_train_loss=15.052331 | avg_val_loss=16.327366 *
+2025-12-21 17:04:47 src.pytorch.train_workflow INFO     Epoch 27 | avg_train_loss=14.738002 | avg_val_loss=16.172830 *
+2025-12-21 17:04:48 src.pytorch.train_workflow INFO     Epoch 28 | avg_train_loss=14.415395 | avg_val_loss=15.900444 *
+2025-12-21 17:04:50 src.pytorch.train_workflow INFO     Epoch 29 | avg_train_loss=14.076099 | avg_val_loss=15.788075 *
+2025-12-21 17:04:52 src.pytorch.train_workflow INFO     Epoch 30 | avg_train_loss=13.755711 | avg_val_loss=15.457468 *
+2025-12-21 17:04:54 src.pytorch.train_workflow INFO     Epoch 31 | avg_train_loss=13.425215 | avg_val_loss=15.226925 *
+2025-12-21 17:04:56 src.pytorch.train_workflow INFO     Epoch 32 | avg_train_loss=13.112971 | avg_val_loss=15.009731 *
+2025-12-21 17:04:57 src.pytorch.train_workflow INFO     Epoch 33 | avg_train_loss=12.795665 | avg_val_loss=14.758661 *
+2025-12-21 17:04:59 src.pytorch.train_workflow INFO     Epoch 34 | avg_train_loss=12.467209 | avg_val_loss=14.537518 *
+2025-12-21 17:05:01 src.pytorch.train_workflow INFO     Epoch 35 | avg_train_loss=12.176562 | avg_val_loss=14.349266 *
+2025-12-21 17:05:02 src.pytorch.train_workflow INFO     Epoch 36 | avg_train_loss=11.846406 | avg_val_loss=14.034164 *
+2025-12-21 17:05:04 src.pytorch.train_workflow INFO     Epoch 37 | avg_train_loss=11.503290 | avg_val_loss=13.999786 *
+2025-12-21 17:05:05 src.pytorch.train_workflow INFO     Epoch 38 | avg_train_loss=11.218193 | avg_val_loss=13.787435 *
+2025-12-21 17:05:06 src.pytorch.train_workflow INFO     Epoch 39 | avg_train_loss=11.009398 | avg_val_loss=13.499187 *
+2025-12-21 17:05:07 src.pytorch.train_workflow INFO     Epoch 40 | avg_train_loss=10.586359 | avg_val_loss=13.172958 *
+2025-12-21 17:05:08 src.pytorch.train_workflow INFO     Epoch 41 | avg_train_loss=10.283597 | avg_val_loss=13.044626 *
+2025-12-21 17:05:10 src.pytorch.train_workflow INFO     Epoch 42 | avg_train_loss=10.015529 | avg_val_loss=12.819228 *
+2025-12-21 17:05:11 src.pytorch.train_workflow INFO     Epoch 43 | avg_train_loss=9.734825 | avg_val_loss=12.674733 *
+2025-12-21 17:05:12 src.pytorch.train_workflow INFO     Epoch 44 | avg_train_loss=9.490964 | avg_val_loss=12.412984 *
+2025-12-21 17:05:13 src.pytorch.train_workflow INFO     Epoch 45 | avg_train_loss=9.175846 | avg_val_loss=12.264880 *
+2025-12-21 17:05:15 src.pytorch.train_workflow INFO     Epoch 46 | avg_train_loss=8.916476 | avg_val_loss=12.061349 *
+2025-12-21 17:05:16 src.pytorch.train_workflow INFO     Epoch 47 | avg_train_loss=8.614653 | avg_val_loss=11.816528 *
+2025-12-21 17:05:17 src.pytorch.train_workflow INFO     Epoch 48 | avg_train_loss=8.403579 | avg_val_loss=11.701372 *
+2025-12-21 17:05:19 src.pytorch.train_workflow INFO     Epoch 49 | avg_train_loss=8.104209 | avg_val_loss=11.633716 *
+2025-12-21 17:05:20 src.pytorch.train_workflow INFO     Epoch 50 | avg_train_loss=7.875304 | avg_val_loss=11.499826 *
+2025-12-21 17:05:21 src.pytorch.train_workflow INFO     Epoch 51 | avg_train_loss=7.635912 | avg_val_loss=11.085903 *
+2025-12-21 17:05:23 src.pytorch.train_workflow INFO     Epoch 52 | avg_train_loss=7.465135 | avg_val_loss=11.108695
+2025-12-21 17:05:24 src.pytorch.train_workflow INFO     Epoch 53 | avg_train_loss=7.213751 | avg_val_loss=11.045628 *
+2025-12-21 17:05:25 src.pytorch.train_workflow INFO     Epoch 54 | avg_train_loss=6.940348 | avg_val_loss=10.595827 *
+2025-12-21 17:05:26 src.pytorch.train_workflow INFO     Epoch 55 | avg_train_loss=6.707940 | avg_val_loss=10.545702 *
+2025-12-21 17:05:27 src.pytorch.train_workflow INFO     Epoch 56 | avg_train_loss=6.536179 | avg_val_loss=10.275614 *
+2025-12-21 17:05:29 src.pytorch.train_workflow INFO     Epoch 57 | avg_train_loss=6.330169 | avg_val_loss=10.192982 *
+2025-12-21 17:05:30 src.pytorch.train_workflow INFO     Epoch 58 | avg_train_loss=6.102822 | avg_val_loss=9.968939 *
+2025-12-21 17:05:31 src.pytorch.train_workflow INFO     Epoch 59 | avg_train_loss=5.927864 | avg_val_loss=9.874814 *
+2025-12-21 17:05:32 src.pytorch.train_workflow INFO     Epoch 60 | avg_train_loss=5.734219 | avg_val_loss=9.722561 *
+2025-12-21 17:05:33 src.pytorch.train_workflow INFO     Epoch 61 | avg_train_loss=5.538386 | avg_val_loss=9.547987 *
+2025-12-21 17:05:35 src.pytorch.train_workflow INFO     Epoch 62 | avg_train_loss=5.370854 | avg_val_loss=9.488437 *
+2025-12-21 17:05:36 src.pytorch.train_workflow INFO     Epoch 63 | avg_train_loss=5.207388 | avg_val_loss=9.216482 *
+2025-12-21 17:05:37 src.pytorch.train_workflow INFO     Epoch 64 | avg_train_loss=5.068693 | avg_val_loss=9.030204 *
+2025-12-21 17:05:38 src.pytorch.train_workflow INFO     Epoch 65 | avg_train_loss=4.881006 | avg_val_loss=8.987112 *
+2025-12-21 17:05:39 src.pytorch.train_workflow INFO     Epoch 66 | avg_train_loss=4.796143 | avg_val_loss=8.989018
+2025-12-21 17:05:40 src.pytorch.train_workflow INFO     Epoch 67 | avg_train_loss=4.633858 | avg_val_loss=8.826540 *
+2025-12-21 17:05:41 src.pytorch.train_workflow INFO     Epoch 68 | avg_train_loss=4.438495 | avg_val_loss=8.617968 *
+2025-12-21 17:05:43 src.pytorch.train_workflow INFO     Epoch 69 | avg_train_loss=4.273484 | avg_val_loss=8.560543 *
+2025-12-21 17:05:44 src.pytorch.train_workflow INFO     Epoch 70 | avg_train_loss=4.153627 | avg_val_loss=8.419121 *
+2025-12-21 17:05:45 src.pytorch.train_workflow INFO     Epoch 71 | avg_train_loss=4.057583 | avg_val_loss=8.227951 *
+2025-12-21 17:05:46 src.pytorch.train_workflow INFO     Epoch 72 | avg_train_loss=3.879936 | avg_val_loss=8.251444
+2025-12-21 17:05:47 src.pytorch.train_workflow INFO     Epoch 73 | avg_train_loss=3.749567 | avg_val_loss=8.055754 *
+2025-12-21 17:05:48 src.pytorch.train_workflow INFO     Epoch 74 | avg_train_loss=3.659013 | avg_val_loss=7.896978 *
+2025-12-21 17:05:49 src.pytorch.train_workflow INFO     Epoch 75 | avg_train_loss=3.576807 | avg_val_loss=7.826684 *
+2025-12-21 17:05:50 src.pytorch.train_workflow INFO     Epoch 76 | avg_train_loss=3.432853 | avg_val_loss=7.668151 *
+2025-12-21 17:05:51 src.pytorch.train_workflow INFO     Epoch 77 | avg_train_loss=3.331074 | avg_val_loss=7.699211
+2025-12-21 17:05:53 src.pytorch.train_workflow INFO     Epoch 78 | avg_train_loss=3.229784 | avg_val_loss=7.552998 *
+2025-12-21 17:05:54 src.pytorch.train_workflow INFO     Epoch 79 | avg_train_loss=3.114395 | avg_val_loss=7.362428 *
+2025-12-21 17:05:55 src.pytorch.train_workflow INFO     Epoch 80 | avg_train_loss=3.007704 | avg_val_loss=7.277657 *
+2025-12-21 17:05:56 src.pytorch.train_workflow INFO     Epoch 81 | avg_train_loss=2.890895 | avg_val_loss=7.243387 *
+2025-12-21 17:05:57 src.pytorch.train_workflow INFO     Epoch 82 | avg_train_loss=2.806478 | avg_val_loss=7.127802 *
+2025-12-21 17:05:58 src.pytorch.train_workflow INFO     Epoch 83 | avg_train_loss=2.726423 | avg_val_loss=6.989469 *
+2025-12-21 17:05:59 src.pytorch.train_workflow INFO     Epoch 84 | avg_train_loss=2.646174 | avg_val_loss=6.894781 *
+2025-12-21 17:06:00 src.pytorch.train_workflow INFO     Epoch 85 | avg_train_loss=2.568231 | avg_val_loss=6.864531 *
+2025-12-21 17:06:01 src.pytorch.train_workflow INFO     Epoch 86 | avg_train_loss=2.465600 | avg_val_loss=6.748379 *
+2025-12-21 17:06:02 src.pytorch.train_workflow INFO     Epoch 87 | avg_train_loss=2.382479 | avg_val_loss=6.677432 *
+2025-12-21 17:06:03 src.pytorch.train_workflow INFO     Epoch 88 | avg_train_loss=2.310915 | avg_val_loss=6.628762 *
+2025-12-21 17:06:04 src.pytorch.train_workflow INFO     Epoch 89 | avg_train_loss=2.254819 | avg_val_loss=6.541549 *
+2025-12-21 17:06:05 src.pytorch.train_workflow INFO     Epoch 90 | avg_train_loss=2.181681 | avg_val_loss=6.463243 *
+2025-12-21 17:06:06 src.pytorch.train_workflow INFO     Epoch 91 | avg_train_loss=2.084675 | avg_val_loss=6.441823 *
+2025-12-21 17:06:07 src.pytorch.train_workflow INFO     Epoch 92 | avg_train_loss=2.020931 | avg_val_loss=6.309475 *
+2025-12-21 17:06:08 src.pytorch.train_workflow INFO     Epoch 93 | avg_train_loss=1.962123 | avg_val_loss=6.275403 *
+2025-12-21 17:06:09 src.pytorch.train_workflow INFO     Epoch 94 | avg_train_loss=1.886780 | avg_val_loss=6.306781
+2025-12-21 17:06:10 src.pytorch.train_workflow INFO     Epoch 95 | avg_train_loss=1.845642 | avg_val_loss=6.211097 *
+2025-12-21 17:06:11 src.pytorch.train_workflow INFO     Epoch 96 | avg_train_loss=1.839024 | avg_val_loss=6.179777 *
+2025-12-21 17:06:13 src.pytorch.train_workflow INFO     Epoch 97 | avg_train_loss=1.768719 | avg_val_loss=6.198158
+2025-12-21 17:06:14 src.pytorch.train_workflow INFO     Epoch 98 | avg_train_loss=1.675718 | avg_val_loss=5.997054 *
+2025-12-21 17:06:15 src.pytorch.train_workflow INFO     Epoch 99 | avg_train_loss=1.606347 | avg_val_loss=5.953784 *
+2025-12-21 17:06:16 src.pytorch.train_workflow INFO     Epoch 100 | avg_train_loss=1.561041 | avg_val_loss=5.903207 *
+2025-12-21 17:06:17 src.pytorch.train_workflow INFO     Epoch 101 | avg_train_loss=1.506383 | avg_val_loss=5.807251 *
+2025-12-21 17:06:18 src.pytorch.train_workflow INFO     Epoch 102 | avg_train_loss=1.475879 | avg_val_loss=5.789632 *
+2025-12-21 17:06:19 src.pytorch.train_workflow INFO     Epoch 103 | avg_train_loss=1.409912 | avg_val_loss=5.739157 *
+2025-12-21 17:06:20 src.pytorch.train_workflow INFO     Epoch 104 | avg_train_loss=1.372633 | avg_val_loss=5.700205 *
+2025-12-21 17:06:21 src.pytorch.train_workflow INFO     Epoch 105 | avg_train_loss=1.313347 | avg_val_loss=5.706075
+2025-12-21 17:06:22 src.pytorch.train_workflow INFO     Epoch 106 | avg_train_loss=1.282196 | avg_val_loss=5.594462 *
+2025-12-21 17:06:23 src.pytorch.train_workflow INFO     Epoch 107 | avg_train_loss=1.251094 | avg_val_loss=5.566710 *
+2025-12-21 17:06:24 src.pytorch.train_workflow INFO     Epoch 108 | avg_train_loss=1.205369 | avg_val_loss=5.519678 *
+2025-12-21 17:06:25 src.pytorch.train_workflow INFO     Epoch 109 | avg_train_loss=1.156478 | avg_val_loss=5.459567 *
+2025-12-21 17:06:26 src.pytorch.train_workflow INFO     Epoch 110 | avg_train_loss=1.125328 | avg_val_loss=5.463355
+2025-12-21 17:06:27 src.pytorch.train_workflow INFO     Epoch 111 | avg_train_loss=1.077937 | avg_val_loss=5.391523 *
+2025-12-21 17:06:28 src.pytorch.train_workflow INFO     Epoch 112 | avg_train_loss=1.044065 | avg_val_loss=5.317378 *
+2025-12-21 17:06:29 src.pytorch.train_workflow INFO     Epoch 113 | avg_train_loss=1.019371 | avg_val_loss=5.258634 *
+2025-12-21 17:06:30 src.pytorch.train_workflow INFO     Epoch 114 | avg_train_loss=0.974531 | avg_val_loss=5.326704
+2025-12-21 17:06:32 src.pytorch.train_workflow INFO     Epoch 115 | avg_train_loss=0.937354 | avg_val_loss=5.304012
+2025-12-21 17:06:33 src.pytorch.train_workflow INFO     Epoch 116 | avg_train_loss=0.918925 | avg_val_loss=5.304986
+2025-12-21 17:06:34 src.pytorch.train_workflow INFO     Epoch 117 | avg_train_loss=0.900809 | avg_val_loss=5.205782 *
+2025-12-21 17:06:35 src.pytorch.train_workflow INFO     Epoch 118 | avg_train_loss=0.910411 | avg_val_loss=5.172227 *
+2025-12-21 17:06:36 src.pytorch.train_workflow INFO     Epoch 119 | avg_train_loss=0.829416 | avg_val_loss=5.100051 *
+2025-12-21 17:06:37 src.pytorch.train_workflow INFO     Epoch 120 | avg_train_loss=0.794266 | avg_val_loss=5.075418 *
+2025-12-21 17:06:38 src.pytorch.train_workflow INFO     Epoch 121 | avg_train_loss=0.771898 | avg_val_loss=5.060648 *
+2025-12-21 17:06:39 src.pytorch.train_workflow INFO     Epoch 122 | avg_train_loss=0.740181 | avg_val_loss=5.143934
+2025-12-21 17:06:40 src.pytorch.train_workflow INFO     Epoch 123 | avg_train_loss=0.714480 | avg_val_loss=4.974130 *
+2025-12-21 17:06:41 src.pytorch.train_workflow INFO     Epoch 124 | avg_train_loss=0.694677 | avg_val_loss=4.950056 *
+2025-12-21 17:06:42 src.pytorch.train_workflow INFO     Epoch 125 | avg_train_loss=0.691086 | avg_val_loss=4.929529 *
+2025-12-21 17:06:43 src.pytorch.train_workflow INFO     Epoch 126 | avg_train_loss=0.659712 | avg_val_loss=4.959467
+2025-12-21 17:06:44 src.pytorch.train_workflow INFO     Epoch 127 | avg_train_loss=0.622738 | avg_val_loss=4.873315 *
+2025-12-21 17:06:46 src.pytorch.train_workflow INFO     Epoch 128 | avg_train_loss=0.605118 | avg_val_loss=4.877259
+2025-12-21 17:06:47 src.pytorch.train_workflow INFO     Epoch 129 | avg_train_loss=0.588189 | avg_val_loss=4.960639
+2025-12-21 17:06:48 src.pytorch.train_workflow INFO     Epoch 130 | avg_train_loss=0.574133 | avg_val_loss=4.786131 *
+2025-12-21 17:06:49 src.pytorch.train_workflow INFO     Epoch 131 | avg_train_loss=0.549834 | avg_val_loss=4.739308 *
+2025-12-21 17:06:50 src.pytorch.train_workflow INFO     Epoch 132 | avg_train_loss=0.520665 | avg_val_loss=4.765429
+2025-12-21 17:06:51 src.pytorch.train_workflow INFO     Epoch 133 | avg_train_loss=0.508351 | avg_val_loss=4.703448 *
+2025-12-21 17:06:52 src.pytorch.train_workflow INFO     Epoch 134 | avg_train_loss=0.493783 | avg_val_loss=4.712456
+2025-12-21 17:06:53 src.pytorch.train_workflow INFO     Epoch 135 | avg_train_loss=0.485914 | avg_val_loss=4.759524
+2025-12-21 17:06:55 src.pytorch.train_workflow INFO     Epoch 136 | avg_train_loss=0.467024 | avg_val_loss=4.724526
+2025-12-21 17:06:56 src.pytorch.train_workflow INFO     Epoch 137 | avg_train_loss=0.437226 | avg_val_loss=4.691175 *
+2025-12-21 17:06:57 src.pytorch.train_workflow INFO     Epoch 138 | avg_train_loss=0.419495 | avg_val_loss=4.662233 *
+2025-12-21 17:06:58 src.pytorch.train_workflow INFO     Epoch 139 | avg_train_loss=0.409108 | avg_val_loss=4.633806 *
+2025-12-21 17:07:00 src.pytorch.train_workflow INFO     Epoch 140 | avg_train_loss=0.393009 | avg_val_loss=4.618278 *
+2025-12-21 17:07:01 src.pytorch.train_workflow INFO     Epoch 141 | avg_train_loss=0.380402 | avg_val_loss=4.628650
+2025-12-21 17:07:03 src.pytorch.train_workflow INFO     Epoch 142 | avg_train_loss=0.384899 | avg_val_loss=4.725017
+2025-12-21 17:07:05 src.pytorch.train_workflow INFO     Epoch 143 | avg_train_loss=0.388609 | avg_val_loss=4.547787 *
+2025-12-21 17:07:06 src.pytorch.train_workflow INFO     Epoch 144 | avg_train_loss=0.334755 | avg_val_loss=4.557719
+2025-12-21 17:07:07 src.pytorch.train_workflow INFO     Epoch 145 | avg_train_loss=0.321162 | avg_val_loss=4.505417 *
+2025-12-21 17:07:09 src.pytorch.train_workflow INFO     Epoch 146 | avg_train_loss=0.321199 | avg_val_loss=4.496387 *
+2025-12-21 17:07:11 src.pytorch.train_workflow INFO     Epoch 147 | avg_train_loss=0.298965 | avg_val_loss=4.520479
+2025-12-21 17:07:13 src.pytorch.train_workflow INFO     Epoch 148 | avg_train_loss=0.334124 | avg_val_loss=4.512362
+2025-12-21 17:07:14 src.pytorch.train_workflow INFO     Epoch 149 | avg_train_loss=0.283112 | avg_val_loss=4.473684 *
+2025-12-21 17:07:16 src.pytorch.train_workflow INFO     Epoch 150 | avg_train_loss=0.271010 | avg_val_loss=4.522641
+2025-12-21 17:07:18 src.pytorch.train_workflow INFO     Epoch 151 | avg_train_loss=0.264007 | avg_val_loss=4.451853 *
+2025-12-21 17:07:20 src.pytorch.train_workflow INFO     Epoch 152 | avg_train_loss=0.252479 | avg_val_loss=4.484154
+2025-12-21 17:07:21 src.pytorch.train_workflow INFO     Epoch 153 | avg_train_loss=0.239775 | avg_val_loss=4.444897 *
+2025-12-21 17:07:22 src.pytorch.train_workflow INFO     Epoch 154 | avg_train_loss=0.243113 | avg_val_loss=4.476193
+2025-12-21 17:07:23 src.pytorch.train_workflow INFO     Epoch 155 | avg_train_loss=0.224609 | avg_val_loss=4.449389
+2025-12-21 17:07:25 src.pytorch.train_workflow INFO     Epoch 156 | avg_train_loss=0.223750 | avg_val_loss=4.472440
+2025-12-21 17:07:26 src.pytorch.train_workflow INFO     Epoch 157 | avg_train_loss=0.214607 | avg_val_loss=4.463131
+2025-12-21 17:07:27 src.pytorch.train_workflow INFO     Epoch 158 | avg_train_loss=0.208834 | avg_val_loss=4.438179 *
+2025-12-21 17:07:28 src.pytorch.train_workflow INFO     Epoch 159 | avg_train_loss=0.196672 | avg_val_loss=4.313922 *
+2025-12-21 17:07:30 src.pytorch.train_workflow INFO     Epoch 160 | avg_train_loss=0.186733 | avg_val_loss=4.375166
+2025-12-21 17:07:32 src.pytorch.train_workflow INFO     Epoch 161 | avg_train_loss=0.175932 | avg_val_loss=4.375558
+2025-12-21 17:07:33 src.pytorch.train_workflow INFO     Epoch 162 | avg_train_loss=0.174282 | avg_val_loss=4.412283
+2025-12-21 17:07:34 src.pytorch.train_workflow INFO     Epoch 163 | avg_train_loss=0.163606 | avg_val_loss=4.377379
+2025-12-21 17:07:35 src.pytorch.train_workflow INFO     Epoch 164 | avg_train_loss=0.154549 | avg_val_loss=4.346256
+2025-12-21 17:07:36 src.pytorch.train_workflow INFO     Epoch 165 | avg_train_loss=0.158522 | avg_val_loss=4.317703
+2025-12-21 17:07:37 src.pytorch.train_workflow INFO     Epoch 166 | avg_train_loss=0.156365 | avg_val_loss=4.326869
+2025-12-21 17:07:39 src.pytorch.train_workflow INFO     Epoch 167 | avg_train_loss=0.145405 | avg_val_loss=4.321518
+2025-12-21 17:07:40 src.pytorch.train_workflow INFO     Epoch 168 | avg_train_loss=0.132414 | avg_val_loss=4.381410
+2025-12-21 17:07:41 src.pytorch.train_workflow INFO     Epoch 169 | avg_train_loss=0.135621 | avg_val_loss=4.329866
+2025-12-21 17:07:43 src.pytorch.train_workflow INFO     Epoch 170 | avg_train_loss=0.133044 | avg_val_loss=4.384013
+2025-12-21 17:07:44 src.pytorch.train_workflow INFO     Epoch 171 | avg_train_loss=0.125066 | avg_val_loss=4.301225 *
+2025-12-21 17:07:45 src.pytorch.train_workflow INFO     Epoch 172 | avg_train_loss=0.114256 | avg_val_loss=4.305555
+2025-12-21 17:07:46 src.pytorch.train_workflow INFO     Epoch 173 | avg_train_loss=0.113586 | avg_val_loss=4.323593
+2025-12-21 17:07:47 src.pytorch.train_workflow INFO     Epoch 174 | avg_train_loss=0.112859 | avg_val_loss=4.268705 *
+2025-12-21 17:07:49 src.pytorch.train_workflow INFO     Epoch 175 | avg_train_loss=0.103390 | avg_val_loss=4.264644 *
+2025-12-21 17:07:50 src.pytorch.train_workflow INFO     Epoch 176 | avg_train_loss=0.093648 | avg_val_loss=4.249538 *
+2025-12-21 17:07:51 src.pytorch.train_workflow INFO     Epoch 177 | avg_train_loss=0.096521 | avg_val_loss=4.263486
+2025-12-21 17:07:52 src.pytorch.train_workflow INFO     Epoch 178 | avg_train_loss=0.104623 | avg_val_loss=4.280404
+2025-12-21 17:07:54 src.pytorch.train_workflow INFO     Epoch 179 | avg_train_loss=0.108645 | avg_val_loss=4.293045
+2025-12-21 17:07:55 src.pytorch.train_workflow INFO     Epoch 180 | avg_train_loss=0.085945 | avg_val_loss=4.302166
+2025-12-21 17:07:57 src.pytorch.train_workflow INFO     Epoch 181 | avg_train_loss=0.075774 | avg_val_loss=4.271334
+2025-12-21 17:07:59 src.pytorch.train_workflow INFO     Epoch 182 | avg_train_loss=0.076444 | avg_val_loss=4.241726 *
+2025-12-21 17:08:00 src.pytorch.train_workflow INFO     Epoch 183 | avg_train_loss=0.069156 | avg_val_loss=4.228430 *
+2025-12-21 17:08:01 src.pytorch.train_workflow INFO     Epoch 184 | avg_train_loss=0.071635 | avg_val_loss=4.338960
+2025-12-21 17:08:03 src.pytorch.train_workflow INFO     Epoch 185 | avg_train_loss=0.089743 | avg_val_loss=4.230812
+2025-12-21 17:08:05 src.pytorch.train_workflow INFO     Epoch 186 | avg_train_loss=0.068646 | avg_val_loss=4.248951
+2025-12-21 17:08:07 src.pytorch.train_workflow INFO     Epoch 187 | avg_train_loss=0.062635 | avg_val_loss=4.205003 *
+2025-12-21 17:08:09 src.pytorch.train_workflow INFO     Epoch 188 | avg_train_loss=0.060996 | avg_val_loss=4.250372
+2025-12-21 17:08:11 src.pytorch.train_workflow INFO     Epoch 189 | avg_train_loss=0.062385 | avg_val_loss=4.195182 *
+2025-12-21 17:08:12 src.pytorch.train_workflow INFO     Epoch 190 | avg_train_loss=0.059075 | avg_val_loss=4.223958
+2025-12-21 17:08:13 src.pytorch.train_workflow INFO     Epoch 191 | avg_train_loss=0.060310 | avg_val_loss=4.217717
+2025-12-21 17:08:15 src.pytorch.train_workflow INFO     Epoch 192 | avg_train_loss=0.050767 | avg_val_loss=4.271242
+2025-12-21 17:08:16 src.pytorch.train_workflow INFO     Epoch 193 | avg_train_loss=0.048596 | avg_val_loss=4.209604
+2025-12-21 17:08:17 src.pytorch.train_workflow INFO     Epoch 194 | avg_train_loss=0.054408 | avg_val_loss=4.291313
+2025-12-21 17:08:18 src.pytorch.train_workflow INFO     Epoch 195 | avg_train_loss=0.051623 | avg_val_loss=4.216380
+2025-12-21 17:08:20 src.pytorch.train_workflow INFO     Epoch 196 | avg_train_loss=0.045867 | avg_val_loss=4.295200
+2025-12-21 17:08:21 src.pytorch.train_workflow INFO     Epoch 197 | avg_train_loss=0.043248 | avg_val_loss=4.263662
+2025-12-21 17:08:22 src.pytorch.train_workflow INFO     Epoch 198 | avg_train_loss=0.040385 | avg_val_loss=4.223648
+2025-12-21 17:08:23 src.pytorch.train_workflow INFO     Epoch 199 | avg_train_loss=0.035663 | avg_val_loss=4.202040
+2025-12-21 17:08:25 src.pytorch.train_workflow INFO     Epoch 200 | avg_train_loss=0.037969 | avg_val_loss=4.196809
+2025-12-21 17:08:26 src.pytorch.train_workflow INFO     Epoch 201 | avg_train_loss=0.035812 | avg_val_loss=4.191939 *
+2025-12-21 17:08:27 src.pytorch.train_workflow INFO     Epoch 202 | avg_train_loss=0.034360 | avg_val_loss=4.204097
+2025-12-21 17:08:29 src.pytorch.train_workflow INFO     Epoch 203 | avg_train_loss=0.037168 | avg_val_loss=4.184720 *
+2025-12-21 17:08:30 src.pytorch.train_workflow INFO     Epoch 204 | avg_train_loss=0.035913 | avg_val_loss=4.211564
+2025-12-21 17:08:31 src.pytorch.train_workflow INFO     Epoch 205 | avg_train_loss=0.032477 | avg_val_loss=4.205842
+2025-12-21 17:08:33 src.pytorch.train_workflow INFO     Epoch 206 | avg_train_loss=0.027626 | avg_val_loss=4.233643
+2025-12-21 17:08:35 src.pytorch.train_workflow INFO     Epoch 207 | avg_train_loss=0.044829 | avg_val_loss=4.189110
+2025-12-21 17:08:36 src.pytorch.train_workflow INFO     Epoch 208 | avg_train_loss=0.035211 | avg_val_loss=4.223032
+2025-12-21 17:08:37 src.pytorch.train_workflow INFO     Epoch 209 | avg_train_loss=0.044787 | avg_val_loss=4.193098
+2025-12-21 17:08:39 src.pytorch.train_workflow INFO     Epoch 210 | avg_train_loss=0.027975 | avg_val_loss=4.197521
+2025-12-21 17:08:40 src.pytorch.train_workflow INFO     Epoch 211 | avg_train_loss=0.031903 | avg_val_loss=4.281279
+2025-12-21 17:08:41 src.pytorch.train_workflow INFO     Epoch 212 | avg_train_loss=0.029146 | avg_val_loss=4.210521
+2025-12-21 17:08:42 src.pytorch.train_workflow INFO     Epoch 213 | avg_train_loss=0.028815 | avg_val_loss=4.224956
+2025-12-21 17:08:43 src.pytorch.train_workflow INFO     Epoch 214 | avg_train_loss=0.031010 | avg_val_loss=4.193670
+2025-12-21 17:08:45 src.pytorch.train_workflow INFO     Epoch 215 | avg_train_loss=0.020842 | avg_val_loss=4.213158
+2025-12-21 17:08:46 src.pytorch.train_workflow INFO     Epoch 216 | avg_train_loss=0.023007 | avg_val_loss=4.209931
+2025-12-21 17:08:47 src.pytorch.train_workflow INFO     Epoch 217 | avg_train_loss=0.022738 | avg_val_loss=4.251327
+2025-12-21 17:08:48 src.pytorch.train_workflow INFO     Epoch 218 | avg_train_loss=0.023465 | avg_val_loss=4.205684
+2025-12-21 17:08:49 src.pytorch.train_workflow INFO     Epoch 219 | avg_train_loss=0.022967 | avg_val_loss=4.183590 *
+2025-12-21 17:08:51 src.pytorch.train_workflow INFO     Epoch 220 | avg_train_loss=0.023801 | avg_val_loss=4.203954
+2025-12-21 17:08:52 src.pytorch.train_workflow INFO     Epoch 221 | avg_train_loss=0.016075 | avg_val_loss=4.234584
+2025-12-21 17:08:53 src.pytorch.train_workflow INFO     Epoch 222 | avg_train_loss=0.027151 | avg_val_loss=4.195312
+2025-12-21 17:08:54 src.pytorch.train_workflow INFO     Epoch 223 | avg_train_loss=0.021067 | avg_val_loss=4.177577 *
+2025-12-21 17:08:56 src.pytorch.train_workflow INFO     Epoch 224 | avg_train_loss=0.025587 | avg_val_loss=4.209280
+2025-12-21 17:08:58 src.pytorch.train_workflow INFO     Epoch 225 | avg_train_loss=0.020280 | avg_val_loss=4.214406
+2025-12-21 17:08:59 src.pytorch.train_workflow INFO     Epoch 226 | avg_train_loss=0.026045 | avg_val_loss=4.169636 *
+2025-12-21 17:09:00 src.pytorch.train_workflow INFO     Epoch 227 | avg_train_loss=0.028955 | avg_val_loss=4.251799
+2025-12-21 17:09:01 src.pytorch.train_workflow INFO     Epoch 228 | avg_train_loss=0.033157 | avg_val_loss=4.163813 *
+2025-12-21 17:09:03 src.pytorch.train_workflow INFO     Epoch 229 | avg_train_loss=0.012950 | avg_val_loss=4.218438
+2025-12-21 17:09:04 src.pytorch.train_workflow INFO     Epoch 230 | avg_train_loss=0.015811 | avg_val_loss=4.193250
+2025-12-21 17:09:05 src.pytorch.train_workflow INFO     Epoch 231 | avg_train_loss=0.011439 | avg_val_loss=4.178053
+2025-12-21 17:09:06 src.pytorch.train_workflow INFO     Epoch 232 | avg_train_loss=0.018441 | avg_val_loss=4.259987
+2025-12-21 17:09:08 src.pytorch.train_workflow INFO     Epoch 233 | avg_train_loss=0.037529 | avg_val_loss=4.225050
+2025-12-21 17:09:09 src.pytorch.train_workflow INFO     Epoch 234 | avg_train_loss=0.022095 | avg_val_loss=4.222814
+2025-12-21 17:09:10 src.pytorch.train_workflow INFO     Epoch 235 | avg_train_loss=0.014063 | avg_val_loss=4.193986
+2025-12-21 17:09:12 src.pytorch.train_workflow INFO     Epoch 236 | avg_train_loss=0.011990 | avg_val_loss=4.205411
+2025-12-21 17:09:13 src.pytorch.train_workflow INFO     Epoch 237 | avg_train_loss=0.008758 | avg_val_loss=4.197549
+2025-12-21 17:09:14 src.pytorch.train_workflow INFO     Epoch 238 | avg_train_loss=0.017765 | avg_val_loss=4.215187
+2025-12-21 17:09:15 src.pytorch.train_workflow INFO     Epoch 239 | avg_train_loss=0.017810 | avg_val_loss=4.170181
+2025-12-21 17:09:17 src.pytorch.train_workflow INFO     Epoch 240 | avg_train_loss=0.012393 | avg_val_loss=4.191472
+2025-12-21 17:09:18 src.pytorch.train_workflow INFO     Epoch 241 | avg_train_loss=0.028706 | avg_val_loss=4.172273
+2025-12-21 17:09:19 src.pytorch.train_workflow INFO     Epoch 242 | avg_train_loss=0.033599 | avg_val_loss=4.150007 *
+2025-12-21 17:09:20 src.pytorch.train_workflow INFO     Epoch 243 | avg_train_loss=0.020425 | avg_val_loss=4.158129
+2025-12-21 17:09:22 src.pytorch.train_workflow INFO     Epoch 244 | avg_train_loss=0.020042 | avg_val_loss=4.184226
+2025-12-21 17:09:23 src.pytorch.train_workflow INFO     Epoch 245 | avg_train_loss=0.011127 | avg_val_loss=4.240977
+2025-12-21 17:09:24 src.pytorch.train_workflow INFO     Epoch 246 | avg_train_loss=0.007575 | avg_val_loss=4.207006
+2025-12-21 17:09:26 src.pytorch.train_workflow INFO     Epoch 247 | avg_train_loss=0.008325 | avg_val_loss=4.194492
+2025-12-21 17:09:27 src.pytorch.train_workflow INFO     Epoch 248 | avg_train_loss=0.012743 | avg_val_loss=4.197522
+2025-12-21 17:09:29 src.pytorch.train_workflow INFO     Epoch 249 | avg_train_loss=0.010536 | avg_val_loss=4.199544
+2025-12-21 17:09:30 src.pytorch.train_workflow INFO     Epoch 250 | avg_train_loss=0.011045 | avg_val_loss=4.254806
+2025-12-21 17:09:31 src.pytorch.train_workflow INFO     Epoch 251 | avg_train_loss=0.017215 | avg_val_loss=4.179564
+2025-12-21 17:09:33 src.pytorch.train_workflow INFO     Epoch 252 | avg_train_loss=0.029459 | avg_val_loss=4.196517
+2025-12-21 17:09:34 src.pytorch.train_workflow INFO     Epoch 253 | avg_train_loss=0.012769 | avg_val_loss=4.234041
+2025-12-21 17:09:35 src.pytorch.train_workflow INFO     Epoch 254 | avg_train_loss=0.009598 | avg_val_loss=4.228046
+2025-12-21 17:09:37 src.pytorch.train_workflow INFO     Epoch 255 | avg_train_loss=0.018805 | avg_val_loss=4.263841
+2025-12-21 17:09:38 src.pytorch.train_workflow INFO     Epoch 256 | avg_train_loss=0.026369 | avg_val_loss=4.207133
+2025-12-21 17:09:39 src.pytorch.train_workflow INFO     Epoch 257 | avg_train_loss=0.010408 | avg_val_loss=4.253443
+2025-12-21 17:09:40 src.pytorch.train_workflow INFO     Epoch 258 | avg_train_loss=0.007563 | avg_val_loss=4.248693
+2025-12-21 17:09:42 src.pytorch.train_workflow INFO     Epoch 259 | avg_train_loss=0.013774 | avg_val_loss=4.205842
+2025-12-21 17:09:43 src.pytorch.train_workflow INFO     Epoch 260 | avg_train_loss=0.012726 | avg_val_loss=4.293723
+2025-12-21 17:09:44 src.pytorch.train_workflow INFO     Epoch 261 | avg_train_loss=0.009932 | avg_val_loss=4.248174
+2025-12-21 17:09:45 src.pytorch.train_workflow INFO     Epoch 262 | avg_train_loss=0.019466 | avg_val_loss=4.209613
+2025-12-21 17:09:47 src.pytorch.train_workflow INFO     Epoch 263 | avg_train_loss=0.012005 | avg_val_loss=4.165829
+2025-12-21 17:09:48 src.pytorch.train_workflow INFO     Epoch 264 | avg_train_loss=0.016520 | avg_val_loss=4.249898
+2025-12-21 17:09:49 src.pytorch.train_workflow INFO     Epoch 265 | avg_train_loss=0.015508 | avg_val_loss=4.206916
+2025-12-21 17:09:50 src.pytorch.train_workflow INFO     Epoch 266 | avg_train_loss=0.026953 | avg_val_loss=4.183696
+2025-12-21 17:09:52 src.pytorch.train_workflow INFO     Epoch 267 | avg_train_loss=0.020773 | avg_val_loss=4.200871
+2025-12-21 17:09:53 src.pytorch.train_workflow INFO     Epoch 268 | avg_train_loss=0.016729 | avg_val_loss=4.168984
+2025-12-21 17:09:53 src.pytorch.train_workflow INFO     Early stop. Best epoch: 243/269
+2025-12-21 17:09:53 src.pytorch.train_workflow INFO     Mem usage END: 4435 MB
+2025-12-21 17:09:53 __main__     INFO     New best val loss at fold 0 = 4.150007152557373
+2025-12-21 17:09:53 __main__     INFO     Finishing training.
+2025-12-21 17:09:53 __main__     INFO     Elapsed time: 342.3531/1499s
+2025-12-21 17:09:53 __main__     INFO     Peak memory usage: 4436 MB
+2025-12-21 17:09:53 __main__     INFO     Training complete!

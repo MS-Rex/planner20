@@ -1,0 +1,8 @@
+(fly plane1 chicago miami)
+(board frank plane1 miami)
+(fly plane1 miami newyork)
+(deplane frank plane1 newyork)
+(board eve plane1 newyork)
+(fly plane1 newyork miami)
+(deplane eve plane1 miami)
+; cost = 7 (unit cost)

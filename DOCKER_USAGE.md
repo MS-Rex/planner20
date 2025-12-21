@@ -8,6 +8,14 @@ docker pull miyurus/ai-planner:aiplanner
 
 ## Run the planner
 
+**Option 1: Use the wrapper script (recommended)**
+
+```bash
+./run-planner.sh your-domain.pddl your-problem.pddl plan.txt
+```
+
+**Option 2: Run Docker directly**
+
 ```bash
 docker run --rm \
     -v "$(pwd)/your-domain.pddl:/app/domain.pddl:ro" \

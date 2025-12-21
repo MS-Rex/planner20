@@ -1,0 +1,1 @@
+Atom at-airplane(plane1, newyork);Atom at-airplane(plane1, tokyo);Atom at-person(bob, newyork);Atom at-person(bob, tokyo);Atom in-airplane(bob, plane1)

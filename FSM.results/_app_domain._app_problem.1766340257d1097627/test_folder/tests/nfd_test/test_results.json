@@ -1,0 +1,45 @@
+{
+    "configuration": {
+        "search_algorithm": "eager_greedy",
+        "heuristic": "nn",
+        "max_search_time": "3266s",
+        "max_search_memory": "8192 MB",
+        "max_expansions": "inf"
+    },
+    "results": {
+        "traced_0.pt": {
+            "/app/problem.pddl": {
+                "search_state": "success",
+                "plan_length": 19,
+                "plan_cost": 19,
+                "initial_h": 19,
+                "expanded": 20,
+                "reopened": 0,
+                "evaluated": 33,
+                "generated": 50,
+                "dead_ends": 0,
+                "search_time": 0.187445,
+                "expansion_rate": 106.698,
+                "total_time": 0.330864
+            }
+        }
+    },
+    "statistics": {
+        "traced_0.pt": {
+            "plans_found": 1,
+            "total_problems": 1,
+            "coverage": 1.0,
+            "avg_plan_length": 19,
+            "avg_plan_cost": 19,
+            "avg_initial_h": 19,
+            "avg_expanded": 20,
+            "avg_reopened": 0,
+            "avg_evaluated": 33,
+            "avg_generated": 50,
+            "avg_dead_ends": 0,
+            "avg_search_time": 0.1874,
+            "avg_expansion_rate": 106.698,
+            "total_accumulated_time": 0.3309
+        }
+    }
+}

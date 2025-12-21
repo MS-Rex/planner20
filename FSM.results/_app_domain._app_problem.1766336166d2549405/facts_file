@@ -1,0 +1,1 @@
+Atom at-airplane(plane1, singapore);Atom at-airplane(plane1, sydney);Atom at-airplane(plane1, tokyo);Atom at-person(dave, singapore);Atom at-person(dave, sydney);Atom at-person(dave, tokyo);Atom in-airplane(dave, plane1);Atom at-person(carol, singapore);Atom at-person(carol, sydney);Atom at-person(carol, tokyo);Atom in-airplane(carol, plane1)

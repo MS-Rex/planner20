@@ -1,0 +1,1 @@
+Atom door-open();Atom elevator-at(f1);Atom elevator-at(f2);Atom elevator-at(f3);Atom passenger-at(p2, f1);Atom passenger-at(p2, f2);Atom passenger-at(p2, f3);Atom passenger-in-elevator(p2);Atom passenger-at(p1, f1);Atom passenger-at(p1, f2);Atom passenger-at(p1, f3);Atom passenger-in-elevator(p1)

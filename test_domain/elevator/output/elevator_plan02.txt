@@ -1,0 +1,8 @@
+(open-door )
+(board p1 f3)
+(close-door )
+(move-down f3 f2)
+(move-down f2 f1)
+(open-door )
+(leave p1 f1)
+; cost = 7 (unit cost)

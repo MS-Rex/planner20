@@ -1,0 +1,21 @@
+{
+    "hostname": null,
+    "date": "21 December 2025 17:09:54 UTC",
+    "commit": null,
+    "command": "/app/test.py FSM.results/_app_domain._app_problem.1766336644d28453/test_folder /app/problem.pddl --plan-file /app/output/plan08.txt --facts-file FSM.results/_app_domain._app_problem.1766336644d28453/facts_file --domain-pddl /app/domain.pddl",
+    "train_folder": "FSM.results/_app_domain._app_problem.1766336644d28453/test_folder",
+    "problems_pddl": [
+        "/app/problem.pddl"
+    ],
+    "domain_pddl": "/app/domain.pddl",
+    "search_algorithm": "eager_greedy",
+    "heuristic": "nn",
+    "heuritic_multiplier": 1,
+    "test_model": "all",
+    "facts_file": "FSM.results/_app_domain._app_problem.1766336644d28453/facts_file",
+    "defaults_file": null,
+    "plan_file": "/app/output/plan08.txt",
+    "max_search_time": "2956s",
+    "max_search_memory": "8192 MB",
+    "max_expansions": "inf"
+}

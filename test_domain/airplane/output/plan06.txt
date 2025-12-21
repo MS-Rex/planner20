@@ -1,0 +1,7 @@
+(board bob plane2 rome)
+(fly plane2 rome london)
+(deplane bob plane2 london)
+(board alice plane2 london)
+(fly plane2 london rome)
+(deplane alice plane2 rome)
+; cost = 6 (unit cost)

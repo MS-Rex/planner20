@@ -1,0 +1,99 @@
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO     Configuration
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | hostname: None
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | date: 21 December 2025 16:55:12 UTC
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | commit: None
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | command_line: /app/train.py FSM.results/_app_domain._app_problem.1766336105d7240582/sample_file --train-folder FSM.results/_app_domain._app_problem.1766336105d7240582/test_folder --facts-file FSM.results/_app_domain._app_problem.1766336105d7240582/facts_file
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | samples: FSM.results/_app_domain._app_problem.1766336105d7240582/sample_file
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | samples_md5sum: None
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | model: resnet
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | loss_function: mse
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | save_best_epoch_model: True
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | patience: 25
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | output_layer: regression
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | linear_output: False
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | num_folds: 1
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | hidden_layers: 2
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | hidden_units: 250
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | batch_size: 512
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | learning_rate: 0.0001
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | max_epochs: 1048576
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | max_training_time: 1499s
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | activation: relu
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | weight_decay: 0
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | dropout_rate: 0
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | training_size: 0.9
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | shuffle: True
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | shuffle_seed: 777
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | gpu: False
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | bias: True
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | bias_output: True
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | normalize_output: False
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | check_dead_once: True
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | seed_increment_when_born_dead: 100
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | weights_method: kaiming_uniform
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | seed: 777
+2025-12-21 16:55:12 src.pytorch.utils.log_helpers INFO      | output_folder: results
+2025-12-21 16:55:12 __main__     WARNING  ATTENTION: Training will be performed on device 'cpu'.
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Reading and preparing data...
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Number of samples: 8
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Mem usage after loading data: 3824 MB
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Generating 1-fold...
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Created train dataloader.
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Created validation dataloader.
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Created test dataloader.
+2025-12-21 16:55:12 src.pytorch.k_fold_training_data INFO     Mem usage after creating fold(s): 3825 MB
+2025-12-21 16:55:12 __main__     INFO     Loading the training data took 0.0247s.
+2025-12-21 16:55:12 __main__     INFO     Running training workflow for fold 1 out of 1
+2025-12-21 16:55:12 __main__     INFO     
+HNN(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (hid): ModuleList(
+    (0): Linear(in_features=5, out_features=250, bias=True)
+    (1): Linear(in_features=250, out_features=250, bias=True)
+  )
+  (resblock): ResidualBlock(
+    (resblock): Sequential(
+      (0): Linear(in_features=250, out_features=250, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=250, out_features=250, bias=True)
+    )
+    (relu): ReLU()
+  )
+  (opt): Linear(in_features=250, out_features=1, bias=True)
+  (activation): ReLU()
+  (output_activation): ReLU()
+)
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 0 | avg_train_loss=3.970075 | avg_val_loss=4.000000 *
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 1 | avg_train_loss=3.765847 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 2 | avg_train_loss=3.669899 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 3 | avg_train_loss=3.623559 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 4 | avg_train_loss=3.598871 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 5 | avg_train_loss=3.580736 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 6 | avg_train_loss=3.572105 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 7 | avg_train_loss=3.572925 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 8 | avg_train_loss=3.579624 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 9 | avg_train_loss=3.586871 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 10 | avg_train_loss=3.590602 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 11 | avg_train_loss=3.589683 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 12 | avg_train_loss=3.585169 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 13 | avg_train_loss=3.579352 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 14 | avg_train_loss=3.574402 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 15 | avg_train_loss=3.571788 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 16 | avg_train_loss=3.571657 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 17 | avg_train_loss=3.573408 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 18 | avg_train_loss=3.575842 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 19 | avg_train_loss=3.577714 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 20 | avg_train_loss=3.578269 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 21 | avg_train_loss=3.577393 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 22 | avg_train_loss=3.575567 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 23 | avg_train_loss=3.573541 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 24 | avg_train_loss=3.572027 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 25 | avg_train_loss=3.571434 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Epoch 26 | avg_train_loss=3.571750 | avg_val_loss=4.000000
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Early stop. Best epoch: 1/27
+2025-12-21 16:55:13 src.pytorch.train_workflow INFO     Mem usage END: 4349 MB
+2025-12-21 16:55:13 __main__     INFO     New best val loss at fold 0 = 4.0
+2025-12-21 16:55:13 __main__     INFO     Finishing training.
+2025-12-21 16:55:14 __main__     INFO     Elapsed time: 1.1903/1499s
+2025-12-21 16:55:14 __main__     INFO     Peak memory usage: 4731 MB
+2025-12-21 16:55:14 __main__     INFO     Training complete!

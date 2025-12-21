@@ -1,0 +1,4 @@
+(board alice plane1 london)
+(fly plane1 london paris)
+(deplane alice plane1 paris)
+; cost = 3 (unit cost)

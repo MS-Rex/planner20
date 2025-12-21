@@ -1,0 +1,53 @@
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO     Configuration
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | hostname: None
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | date: 21 December 2025 17:53:16 UTC
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | commit: None
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | command: /app/test.py FSM.results/_app_domain._app_problem.1766339056d8743813/test_folder /app/problem.pddl --plan-file /app/output/plan14.txt --facts-file FSM.results/_app_domain._app_problem.1766339056d8743813/facts_file --domain-pddl /app/domain.pddl
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | train_folder: FSM.results/_app_domain._app_problem.1766339056d8743813/test_folder
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | problems_pddl: ['/app/problem.pddl']
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | domain_pddl: /app/domain.pddl
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | search_algorithm: eager_greedy
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | heuristic: nn
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | heuritic_multiplier: 1
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | test_model: all
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | facts_file: FSM.results/_app_domain._app_problem.1766339056d8743813/facts_file
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | defaults_file: None
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | plan_file: /app/output/plan14.txt
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | max_search_time: 2770s
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | max_search_memory: 8192 MB
+2025-12-21 17:53:16 src.pytorch.utils.log_helpers INFO      | max_expansions: inf
+2025-12-21 17:53:16 __main__     INFO     Solving instance "/app/problem.pddl" (1/1)
+2025-12-21 17:53:16 src.pytorch.fast_downward_api INFO     Command line string: /app/fast-downward.py --search-memory-limit 8192 --plan-file /app/output/plan14.txt /app/domain.pddl /app/problem.pddl --translate-options --unit-cost --search-options --search eager_greedy([nh(torch_fsm_network(path=FSM.results/_app_domain._app_problem.1766339056d8743813/test_folder/models/traced_0.pt, facts=[file FSM.results/_app_domain._app_problem.1766339056d8743813/facts_file]))], max_time=2770)
+2025-12-21 17:53:16 src.pytorch.fast_downward_api INFO     Running FastDownward...
+2025-12-21 17:53:20 src.pytorch.fast_downward_api INFO     Solution found.
+2025-12-21 17:53:20 src.pytorch.fast_downward_api INFO     Downward log saved to FSM.results/_app_domain._app_problem.1766339056d8743813/test_folder/tests/nfd_test/downward_logs/problem.log
+2025-12-21 17:53:20 __main__     INFO     /app/problem.pddl
+2025-12-21 17:53:20 __main__     INFO      | search_state: success
+2025-12-21 17:53:20 __main__     INFO      | plan_length: 22
+2025-12-21 17:53:20 __main__     INFO      | plan_cost: 22
+2025-12-21 17:53:20 __main__     INFO      | initial_h: 76
+2025-12-21 17:53:20 __main__     INFO      | expanded: 1037
+2025-12-21 17:53:20 __main__     INFO      | reopened: 0
+2025-12-21 17:53:20 __main__     INFO      | evaluated: 9017
+2025-12-21 17:53:20 __main__     INFO      | generated: 24750
+2025-12-21 17:53:20 __main__     INFO      | dead_ends: 0
+2025-12-21 17:53:20 __main__     INFO      | search_time: 14.678
+2025-12-21 17:53:20 __main__     INFO      | expansion_rate: 70.65
+2025-12-21 17:53:20 __main__     INFO      | total_time: 14.8348
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO     Testing statistics for model traced_0.pt
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | plans_found: 1
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | total_problems: 1
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | coverage: 1.0
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_plan_length: 22
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_plan_cost: 22
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_initial_h: 76
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_expanded: 1037
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_reopened: 0
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_evaluated: 9017
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_generated: 24750
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_dead_ends: 0
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_search_time: 14.678
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | avg_expansion_rate: 70.65
+2025-12-21 17:53:20 src.pytorch.utils.log_helpers INFO      | total_accumulated_time: 14.8348
+2025-12-21 17:53:20 __main__     INFO     Test on model traced_0.pt complete!
+2025-12-21 17:53:20 __main__     INFO     Test complete!

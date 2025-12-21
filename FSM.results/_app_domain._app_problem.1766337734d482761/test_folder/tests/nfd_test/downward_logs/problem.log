@@ -1,0 +1,202 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /app/builds/release/bin/translator.py /app/domain.pddl /app/problem.pddl --unit-cost --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 16 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+249 relevant atoms
+122 auxiliary atoms
+371 final queue length
+501 total queue pushes
+Completing instantiation... [0.000s CPU, 0.002s wall-clock]
+Instantiating: [0.010s CPU, 0.006s wall-clock]
+Computing fact groups...
+Finding invariants...
+9 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.002s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+6 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+6 of 6 variables necessary.
+0 of 6 mutex groups necessary.
+156 of 156 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 6
+Translator derived variables: 0
+Translator facts: 44
+Translator goal facts: 4
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 156
+Translator axioms: 0
+Translator task size: 618
+Translator peak memory: 312240 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.020s CPU, 0.021s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /app/builds/release/bin/downward --search 'eager_greedy([nh(torch_fsm_network(path=FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts=[file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file]))], max_time=3013)' --internal-plan-file /app/output/plan11.txt < output.sas
+[t=0.00180167s, peak=764744 KB, curr=764760 KB] reading input...
+[t=0.008759s, peak=764920 KB, curr=764920 KB] done reading input!
+FSM.results/_app_domain._app_problem.1766337734d482761/facts_file
+Atom at-airplane(plane2, berlin)
+Atom at-airplane(plane2, lisbon)
+Atom at-airplane(plane2, london)
+Atom at-airplane(plane2, madrid)
+Atom at-airplane(plane2, paris)
+Atom at-airplane(plane2, rome)
+Atom at-airplane(plane1, berlin)
+Atom at-airplane(plane1, lisbon)
+Atom at-airplane(plane1, london)
+Atom at-airplane(plane1, madrid)
+Atom at-airplane(plane1, paris)
+Atom at-airplane(plane1, rome)
+Atom at-person(dave, berlin)
+Atom at-person(dave, lisbon)
+Atom at-person(dave, london)
+Atom at-person(dave, madrid)
+Atom at-person(dave, paris)
+Atom at-person(dave, rome)
+Atom in-airplane(dave, plane1)
+Atom in-airplane(dave, plane2)
+Atom at-person(carol, berlin)
+Atom at-person(carol, lisbon)
+Atom at-person(carol, london)
+Atom at-person(carol, madrid)
+Atom at-person(carol, paris)
+Atom at-person(carol, rome)
+Atom in-airplane(carol, plane1)
+Atom in-airplane(carol, plane2)
+Atom at-person(bob, berlin)
+Atom at-person(bob, lisbon)
+Atom at-person(bob, london)
+Atom at-person(bob, madrid)
+Atom at-person(bob, paris)
+Atom at-person(bob, rome)
+Atom in-airplane(bob, plane1)
+Atom in-airplane(bob, plane2)
+Atom at-person(alice, berlin)
+Atom at-person(alice, lisbon)
+Atom at-person(alice, london)
+Atom at-person(alice, madrid)
+Atom at-person(alice, paris)
+Atom at-person(alice, rome)
+Atom in-airplane(alice, plane1)
+Atom in-airplane(alice, plane2)
+Number of unknown facts:0
+Initializing network heuristic...
+[t=0.172446s, peak=769344 KB, curr=769344 KB] Building successor generator...done!
+[t=0.174803s, peak=769356 KB, curr=769356 KB] peak memory difference for successor generator creation: 12 KB
+[t=0.174833s, peak=769356 KB, curr=769356 KB] time for successor generation creation: 0.00216712s
+[t=0.175188s, peak=769356 KB, curr=769356 KB] Variables: 6
+[t=0.175216s, peak=769356 KB, curr=769356 KB] FactPairs: 44
+[t=0.175231s, peak=769356 KB, curr=769356 KB] Bytes per state: 4
+[t=0.176407s, peak=769364 KB, curr=769364 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.297343s, peak=829636 KB, curr=829636 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 49
+[t=0.297592s, peak=829636 KB, curr=829636 KB] g=0, 1 evaluated, 0 expanded
+[t=0.298476s, peak=829644 KB, curr=829644 KB] Initial heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 49
+[t=0.298594s, peak=829644 KB, curr=829644 KB] pruning method: none
+[t=0.342817s, peak=830468 KB, curr=830468 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 44
+[t=0.343319s, peak=830468 KB, curr=830468 KB] g=1, 5 evaluated, 1 expanded
+[t=0.382407s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 41
+[t=0.383201s, peak=830472 KB, curr=830472 KB] g=3, 20 evaluated, 3 expanded
+[t=0.40587s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 40
+[t=0.406463s, peak=830472 KB, curr=830472 KB] g=4, 30 evaluated, 4 expanded
+[t=0.419095s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 33
+[t=0.420146s, peak=830472 KB, curr=830472 KB] g=5, 35 evaluated, 5 expanded
+[t=0.425664s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 32
+[t=0.425719s, peak=830472 KB, curr=830472 KB] g=6, 45 evaluated, 6 expanded
+[t=0.470251s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 30
+[t=0.472875s, peak=830472 KB, curr=830472 KB] g=9, 65 evaluated, 9 expanded
+[t=0.47307s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 20
+[t=0.4731s, peak=830472 KB, curr=830472 KB] g=9, 66 evaluated, 9 expanded
+[t=0.495329s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 18
+[t=0.49755s, peak=830472 KB, curr=830472 KB] g=10, 86 evaluated, 12 expanded
+[t=0.516956s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 12
+[t=0.517446s, peak=830472 KB, curr=830472 KB] g=12, 94 evaluated, 14 expanded
+[t=0.521347s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 11
+[t=0.521381s, peak=830472 KB, curr=830472 KB] g=12, 98 evaluated, 14 expanded
+[t=0.535643s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 5
+[t=0.536884s, peak=830472 KB, curr=830472 KB] g=13, 104 evaluated, 15 expanded
+[t=0.554835s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 3
+[t=0.556963s, peak=830472 KB, curr=830472 KB] g=14, 118 evaluated, 16 expanded
+[t=0.5719s, peak=830472 KB, curr=830472 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 1
+[t=0.572422s, peak=830472 KB, curr=830472 KB] g=14, 121 evaluated, 16 expanded
+[t=0.572872s, peak=830604 KB, curr=830604 KB] New best heuristic value for nh(torch_fsm_network(path = FSM.results/_app_domain._app_problem.1766337734d482761/test_folder/models/traced_0.pt, facts = list(file FSM.results/_app_domain._app_problem.1766337734d482761/facts_file))): 0
+[t=0.572919s, peak=830604 KB, curr=830604 KB] g=15, 124 evaluated, 17 expanded
+[t=0.851437s, peak=830604 KB, curr=830604 KB] Solution found!
+[t=0.853315s, peak=830604 KB, curr=830604 KB] Actual search time: 0.554702s
+fly plane2 rome madrid (1)
+fly plane1 london madrid (1)
+fly plane2 madrid berlin (1)
+board carol plane1 madrid (1)
+fly plane1 madrid berlin (1)
+deplane carol plane1 berlin (1)
+fly plane1 berlin lisbon (1)
+board dave plane1 lisbon (1)
+fly plane2 berlin rome (1)
+fly plane1 lisbon london (1)
+fly plane2 rome paris (1)
+deplane dave plane1 london (1)
+board bob plane2 paris (1)
+board alice plane1 london (1)
+fly plane2 paris madrid (1)
+deplane bob plane2 madrid (1)
+fly plane1 london lisbon (1)
+deplane alice plane1 lisbon (1)
+[t=0.853406s, peak=830612 KB, curr=830612 KB] Plan length: 18 step(s).
+[t=0.853406s, peak=830612 KB, curr=830612 KB] Plan cost: 18
+[t=0.853406s, peak=830612 KB, curr=830612 KB] Expanded 68 state(s).
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Reopened 0 state(s).
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Evaluated 356 state(s).
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Evaluations: 356
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Generated 811 state(s).
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Dead ends: 0 state(s).
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Number of registered states: 356
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Int hash set load factor: 356/512 = 0.695312
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Int hash set resizes: 9
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Search time: 0.677142s
+[t=0.853406s, peak=830616 KB, curr=830616 KB] Total time: 0.853406s
+Solution found.
+Peak memory: 830620 KB
+Remove intermediate file output.sas
+search exit code: 0
+
